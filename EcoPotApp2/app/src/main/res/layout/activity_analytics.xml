@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0d1117"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_media_previous"
+            android:background="@drawable/card_dark"
+            android:tint="#e6edf3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📊 Moisture Analytics"
+            android:textColor="#e6edf3"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingStart="12dp"/>
+    </LinearLayout>
+
+    <!-- Toggle buttons row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/toggleP1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🟢 Plant 1"
+            android:textColor="#e6edf3"
+            android:backgroundTint="#1a4428"
+            android:layout_marginEnd="12dp"/>
+
+        <Button
+            android:id="@+id/toggleP2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔵 Plant 2"
+            android:textColor="#e6edf3"
+            android:backgroundTint="#0d2a4a"/>
+    </LinearLayout>
+
+    <!-- Chart container -->
+    <FrameLayout
+        android:id="@+id/chartContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/card_dark"/>
+
+    <!-- Legend -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="● Plant 1"
+            android:textColor="#3fb950"
+            android:textSize="13sp"
+            android:paddingEnd="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="● Plant 2"
+            android:textColor="#58a6ff"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+</LinearLayout>

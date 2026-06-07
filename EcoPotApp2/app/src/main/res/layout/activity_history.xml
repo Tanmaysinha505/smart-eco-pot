@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#0d1117" android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+        android:background="#161b22" android:gravity="center_vertical"
+        android:orientation="horizontal" android:paddingStart="8dp">
+        <ImageButton android:id="@+id/backButton" android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:src="@android:drawable/ic_menu_revert" android:tint="#8b949e" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium" android:paddingStart="8dp"
+            android:text="💧 Watering History" android:textColor="#e6edf3" android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="#161b22" android:orientation="horizontal" android:padding="12dp">
+        <LinearLayout android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_marginEnd="8dp" android:layout_weight="1"
+            android:background="@drawable/card_dark" android:gravity="center" android:orientation="vertical">
+            <TextView android:id="@+id/totalCount" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="0" android:textColor="#e6edf3"
+                android:textSize="20sp" android:fontFamily="sans-serif-medium"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Total" android:textColor="#8b949e" android:textSize="11sp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_marginEnd="8dp" android:layout_weight="1"
+            android:background="@drawable/card_dark" android:gravity="center" android:orientation="vertical">
+            <TextView android:id="@+id/todayCount" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="0" android:textColor="#e6edf3"
+                android:textSize="20sp" android:fontFamily="sans-serif-medium"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Today" android:textColor="#8b949e" android:textSize="11sp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_marginEnd="8dp" android:layout_weight="1"
+            android:background="@drawable/card_dark" android:gravity="center" android:orientation="vertical">
+            <TextView android:id="@+id/plant1Count" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="0" android:textColor="#3fb950"
+                android:textSize="20sp" android:fontFamily="sans-serif-medium"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Plant 1" android:textColor="#8b949e" android:textSize="11sp"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="60dp"
+            android:layout_weight="1" android:background="@drawable/card_dark"
+            android:gravity="center" android:orientation="vertical">
+            <TextView android:id="@+id/plant2Count" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="0" android:textColor="#58a6ff"
+                android:textSize="20sp" android:fontFamily="sans-serif-medium"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Plant 2" android:textColor="#8b949e" android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RadioGroup android:id="@+id/filterGroup" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:background="#161b22"
+        android:orientation="horizontal" android:paddingStart="16dp"
+        android:paddingEnd="16dp" android:paddingBottom="12dp">
+        <RadioButton android:id="@+id/filterAll" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="All" android:checked="true"
+            android:textColor="#e6edf3" android:layout_marginEnd="16dp"/>
+        <RadioButton android:id="@+id/filterP1" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Plant 1"
+            android:textColor="#3fb950" android:layout_marginEnd="16dp"/>
+        <RadioButton android:id="@+id/filterP2" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Plant 2" android:textColor="#58a6ff"/>
+    </RadioGroup>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:background="#0d1117">
+        <LinearLayout android:id="@+id/historyContainer" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp" />
+    </ScrollView>
+</LinearLayout>

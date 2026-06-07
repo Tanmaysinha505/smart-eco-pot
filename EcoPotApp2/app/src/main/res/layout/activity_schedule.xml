@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#0d1117" android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+        android:background="#161b22" android:gravity="center_vertical"
+        android:orientation="horizontal" android:paddingStart="8dp">
+        <ImageButton android:id="@+id/backButton" android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:src="@android:drawable/ic_menu_revert" android:tint="#8b949e" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium" android:paddingStart="8dp"
+            android:text="📅 Watering Schedule" android:textColor="#e6edf3" android:textSize="17sp" />
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <!-- Plant 1 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp" android:background="@drawable/card_dark"
+                android:orientation="vertical" android:padding="20dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="🌱 Plant 1 Schedule"
+                        android:textColor="#e6edf3" android:textSize="16sp" android:fontFamily="sans-serif-medium"/>
+                    <Switch android:id="@+id/scheduleEnabled1" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:thumbTint="#3fb950" android:trackTint="#21262d"/>
+                </LinearLayout>
+                <TimePicker android:id="@+id/timePicker1" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:timePickerMode="spinner" android:layout_marginBottom="12dp"/>
+                <TextView android:id="@+id/durationLabel1" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="Duration: 10s"
+                    android:textColor="#8b949e" android:textSize="12sp" android:layout_marginBottom="6dp"/>
+                <SeekBar android:id="@+id/durationSlider1" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:progressTint="#3fb950"
+                    android:thumbTint="#3fb950" android:layout_marginBottom="14dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Repeat on:" android:textColor="#8b949e" android:textSize="12sp" android:layout_marginBottom="6dp"/>
+                <LinearLayout android:id="@+id/dayContainer1" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp"/>
+                <Button android:id="@+id/saveSchedule1" android:layout_width="match_parent"
+                    android:layout_height="44dp" android:background="@drawable/btn_blue"
+                    android:text="💾 Save Schedule" android:textColor="#ffffff"
+                    android:elevation="0dp" android:stateListAnimator="@null"/>
+                <TextView android:id="@+id/scheduleStatus1" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text=""
+                    android:textColor="#8b949e" android:textSize="12sp" android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <!-- Plant 2 -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:background="@drawable/card_dark" android:orientation="vertical" android:padding="20dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="16dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:text="🌿 Plant 2 Schedule"
+                        android:textColor="#e6edf3" android:textSize="16sp" android:fontFamily="sans-serif-medium"/>
+                    <Switch android:id="@+id/scheduleEnabled2" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:thumbTint="#58a6ff" android:trackTint="#21262d"/>
+                </LinearLayout>
+                <TimePicker android:id="@+id/timePicker2" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:timePickerMode="spinner" android:layout_marginBottom="12dp"/>
+                <TextView android:id="@+id/durationLabel2" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text="Duration: 10s"
+                    android:textColor="#8b949e" android:textSize="12sp" android:layout_marginBottom="6dp"/>
+                <SeekBar android:id="@+id/durationSlider2" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:progressTint="#58a6ff"
+                    android:thumbTint="#58a6ff" android:layout_marginBottom="14dp"/>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="Repeat on:" android:textColor="#8b949e" android:textSize="12sp" android:layout_marginBottom="6dp"/>
+                <LinearLayout android:id="@+id/dayContainer2" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="14dp"/>
+                <Button android:id="@+id/saveSchedule2" android:layout_width="match_parent"
+                    android:layout_height="44dp" android:background="@drawable/btn_blue"
+                    android:text="💾 Save Schedule" android:textColor="#ffffff"
+                    android:elevation="0dp" android:stateListAnimator="@null"/>
+                <TextView android:id="@+id/scheduleStatus2" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:text=""
+                    android:textColor="#8b949e" android:textSize="12sp" android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
