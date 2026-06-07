@@ -42,10 +42,7 @@ Automated plant care system with Android mobile app, ESP32 hardware, and intelli
 - ✅ Multi-plant support
 
 ## 🚀 Future Improvements
-- [ ] ML-based optimal watering predictions
-- [ ] Plant species-specific care models
-- [ ] Anomaly detection (sensor failures, overwatering)
-- [ ] Advanced analytics & insights
+ML-based optimal watering predictions if possible
 
 ## 📚 Learning Outcomes
 This project taught me:
